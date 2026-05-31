@@ -1,0 +1,97 @@
+# Git Commands Used in the Assignment
+
+## 1. Clone Repository
+
+```bash
+git clone https://github.com/<username>/MLOPS-assignment-1.git
+cd MLOPS-assignment-1
+```
+
+## 2. Create Decision Tree Branch
+
+```bash
+git checkout -b dtree
+```
+
+## 3. Add Project Files
+
+```bash
+git add .
+git commit -m "Initial commit"
+git push -u origin dtree
+```
+
+## 4. Create Kernel Ridge Branch
+
+```bash
+git checkout main
+git checkout -b kernelridge
+```
+
+## 5. Add Kernel Ridge Model
+
+```bash
+git add .
+git commit -m "Add Kernel Ridge Model"
+git push -u origin kernelridge
+```
+
+## 6. Resolve README Merge Conflict
+
+```bash
+git add README.md
+git commit -m "Resolve README conflict"
+git push -u origin main
+```
+
+## 7. Create GitHub Actions CI Pipeline
+
+```bash
+git add .github/workflows/ci.yml
+git commit -m "Add GitHub Actions CI pipeline"
+git push origin kernelridge
+```
+
+## 8. Create Pull Request and Merge
+
+Kernel Ridge Branch → Main Branch
+
+Pull Request Title:
+
+Add Kernel Ridge Model
+
+After successful CI execution, the pull request was merged into the main branch.
+
+## 9. Verify Branches
+
+```bash
+git branch
+```
+
+Output:
+
+```bash
+dtree
+kernelridge
+main
+```
+
+## 10. Check Repository Status
+
+```bash
+git status
+```
+
+## 11. Pull Latest Changes
+
+```bash
+git pull origin main
+```
+
+## 12. Push Changes
+
+```bash
+git push origin main
+git push origin dtree
+git push origin kernelridge
+```
